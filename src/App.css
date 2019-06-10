@@ -1,33 +1,165 @@
-.App {
-  text-align: center;
+body {
+  background-image: url('https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg');
+  margin: 0;
+  background-size: 100%;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#word-container {
   display: flex;
-  flex-direction: column;
+  align-content: center;
+  /* border: #fec503 1px solid; */
+  width: 100vw;
+  height: 100vh;
+}
+
+#welcome {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 40vw;
+  font-size: 40px;
+  line-height: 40px;
+  color: white;
+  margin-top: -30vh;
+  font-family: 'Lobster', cursive;
+}
+
+nav {
+  width: 100vw;
+  height: 10vh;
+}
+
+ul {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size:  14px;
+  line-height: 22px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  margin-right: 2vw;
+}
+
+div {
+  width: 50vw;
+}
+
+#title {
+  color: #fec503;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+.menu-button {
+  display: none;
+  background-color: #fec503;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.drop-down-menu, .drop-down-menu-open, .drop-down-menu-closed {
+  width: 100vw;
+  height: 50vh;
+  top: 0px;
+  background-color: #17151b;
+  position: absolute;
+  z-index: -10;
+}
+
+.drop-down-buttons-closed, .drop-down-buttons-open, .drop-down-buttons {
+  width: 100vw;
+  height: 50vh;
+  margin-left: 15vw;
+  margin-top: 9vh;
+}
+
+.drop-down-menu {
+  display: none;
+}
+
+.drop-down-buttons {
+  display: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.drop-down-menu-open {
+  animation: openMenu 1s forwards linear;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 22px;
 }
 
-@keyframes App-logo-spin {
+.drop-down-menu-closed {
+  animation: closeMenu 1s forwards linear;
+}
+
+.drop-down-buttons-open {
+  animation: openButtons 1s forwards linear;
+}
+
+.drop-down-buttons-closed {
+  animation: closeButtons 1s forwards linear;
+  display: none;
+}
+
+@keyframes openButtons {
   from {
-    transform: rotate(0deg);
+    height: 0vh;
   }
+
   to {
-    transform: rotate(360deg);
+    height: 3vh;
+  }
+}
+
+@keyframes closeButtons {
+  from {
+    height: 3vh;
+  }
+
+  to {
+    height: 0vh;
+  }
+}
+
+@keyframes openMenu {
+  
+  from {
+    height: 0vh;
+  }
+
+  to {
+    height: 50vh;
+  }
+
+}
+
+@keyframes closeMenu {
+  
+  from {
+    height: 50vh;
+  }
+
+  to {
+    height: 0vh;
+  }
+}
+
+
+@media (max-width: 990px) {
+  .menu-button {
+    display: block;
+  }
+  .menu-text {
+    display: none;
   }
 }
